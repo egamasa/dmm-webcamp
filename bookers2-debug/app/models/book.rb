@@ -9,4 +9,22 @@ class Book < ApplicationRecord
   def favorited_by?(user)
     favorites.exists?(user_id: user.id)
   end
+
+  # 検索
+  def self.looks(search, word)
+    case search
+    when "exact_match" then
+      value = "#{word}"
+    when "forward_match" then
+      value = "#{word}%"
+    when "backward_match" then
+      value = "%#{word}"
+    when "partial_match" then
+      value = "%#{word}%"
+    else
+      return @books = Book.all
+    end
+
+    @books = Book.where("title LIKE?", value)
+  end
 end

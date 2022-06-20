@@ -1,0 +1,7 @@
+$("#comments_list").html("<%= j(render 'book_comments/list', book: @book, book_comment: @book_comment) %>");
+$("#comments_count").html("<%= j(render 'book_comments/count', book: @book) %>");
+
+<% if controller.action_name == "create" %>
+  <!--送信後フォームを空にする-->
+  $("textarea").val('');
+<% end %>

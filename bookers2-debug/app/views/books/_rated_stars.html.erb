@@ -1,0 +1,15 @@
+<div id="rated_stars_<%= book.id %>" data-score="<%= book.rate %>"></div>
+
+<script>
+  $('#rated_stars_<%= book.id %>').empty();
+  $('#rated_stars_<%= book.id %>').raty({
+    readOnly: true,
+    starOff: '<%= asset_path('star-off.png') %>',
+    starOn: '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+
+    score: function () {
+      return $(this).attr('data-score');
+    },
+  });
+</script>

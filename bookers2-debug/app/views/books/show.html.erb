@@ -24,6 +24,9 @@
           <td id="comments_count">
             <%= render 'book_comments/count', book: @book %>
           </td>
+          <td>
+            <%= render 'books/rated_stars', book: @book %>
+          </td>
           <% if @book.user.id == current_user.id %>
             <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success edit_book_#{@book.id}" %></td>
             <td><%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本を削除しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{@book.id}"%></td>

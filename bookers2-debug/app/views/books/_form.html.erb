@@ -8,6 +8,15 @@
     <%= f.text_area :body, class: 'form-control book_body' %>
   </div>
   <div class="form-group">
+    <%= f.label :rate %>
+    <% if controller.action_name == 'edit' %>
+      <%= render 'books/rated_stars', book: @book %>
+      （変更できません）
+    <% else %>
+      <%= render 'books/rate_stars' %>
+    <% end %>
+  </div>
+  <div class="form-group">
     <%= f.submit class: 'btn btn-success' %>
   </div>
 <% end %>

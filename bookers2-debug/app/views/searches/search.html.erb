@@ -1,9 +1,11 @@
 <div class='container px-5 px-sm-0'>
-  <h2>Search result "<%= @search_params[:word] %>" - <%= @search_params[:range] %></h2>
+  <h2>Search result "<%= @search_params[:word] %>" for <%= @search_params[:range] %></h2>
   <%case @search_params[:range]
     when "User"%>
     <%= render 'users/index', users: @users %>
   <%when "Book"%>
+    <%= render 'books/index', books: @books %>
+  <%when "Tag"%>
     <%= render 'books/index', books: @books %>
   <%end%>
 </div>

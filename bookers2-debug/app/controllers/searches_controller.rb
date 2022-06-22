@@ -5,10 +5,10 @@ class SearchesController < ApplicationController
     @search_params = search_params
 
     case @search_params[:range]
+    when "Book", "Tag" then
+      @books = Book.looks(@search_params[:search], @search_params[:word], @search_params[:range])
     when "User" then
       @users = User.looks(@search_params[:search], @search_params[:word])
-    when "Book" then
-      @books = Book.looks(@search_params[:search], @search_params[:word])
     else
     end
   end

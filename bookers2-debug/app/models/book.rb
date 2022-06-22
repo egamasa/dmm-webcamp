@@ -14,20 +14,25 @@ class Book < ApplicationRecord
   end
 
   # 検索
-  def self.looks(search, word)
+  def self.looks(search, word, range = "Book")
     case search
-    when "exact_match" then
-      value = "#{word}"
+    when "partial_match" then
+      value = "%#{word}%"
     when "forward_match" then
       value = "#{word}%"
     when "backward_match" then
       value = "%#{word}"
-    when "partial_match" then
-      value = "%#{word}%"
+    when "exact_match" then
+      value = "#{word}"
     else
       return @books = Book.all
     end
 
-    @books = Book.where("title LIKE?", value)
+    case range
+    when "Book" then
+      @books = Book.where("title LIKE?", value)
+    when "Tag" then
+      @books = Book.where("tag LIKE?", value)
+    end
   end
 end

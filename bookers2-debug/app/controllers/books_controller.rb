@@ -8,7 +8,15 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    case params[:sort]
+    when 'latest' then
+      @books = Book.all.latest
+    when 'highest' then
+      @books = Book.all.highest
+    else
+      @books = Book.all
+    end
+
     @book = Book.new
   end
 

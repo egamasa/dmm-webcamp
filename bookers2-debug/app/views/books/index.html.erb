@@ -9,6 +9,9 @@
     </div>
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
+      <%= link_to '新しい順', books_path(sort: 'latest'), {class: "#{'sort-active' if current_page?('/books?sort=latest')}"} %>
+      ｜
+      <%= link_to '評価の高い順', books_path(sort: 'highest'), {class: "#{'sort-active' if current_page?('/books?sort=highest')}"} %>
       <%= render 'index', books: @books%>
     </div>
   </div>

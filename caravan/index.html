@@ -6,6 +6,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f86ee9ee32.js" crossorigin="anonymous"></script>
     <!-- CSSファイルの読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>CARAVAN</title>
   </head>
@@ -30,7 +31,7 @@
     </header>
 
     <nav>
-      <ul class="nav-list">
+      <ul class="text-center px-0 py-3 m-0">
         <li class="nav-list-item">
           <a href="index.html">Home</a>
         </li>
@@ -39,8 +40,8 @@
       </ul>
     </nav>
 
-    <div class="main-visual">
-      <div class="main-visual-content">
+    <div class="main-visual container-fluid p-0">
+      <div class="main-visual-content col-sm-5">
         <p class="main-visual-text">
           The world is a book<br>
           and those who do not travel<br>
@@ -57,77 +58,78 @@
       <div class="sidebar"></div>
     </div> -->
     <main>
-      <section class="blog">
-        <h2 class="blog-heading">Recent Blogs</h2>
-        <div class="blog-box">
-          <div class="blog-item">
-            <img class="blog-image" src="img/forest.jpg" />
-            <section class="blog-text">
-              <h3 class="blog-text-heading">
-                <a href="single.html">
-                  Hopeful lessons from<br>
-                  the battle to save<br>
-                  rainforests
-                </a>
-              </h3>
-              <p class="blog-date">June 19, 2017</p>
-              <span class="category">Nature</span>
-            </section>
+      <div class="col-sm-8">
+        <section class="blog">
+          <h2 class="blog-heading">Recent Blogs</h2>
+          <div class="blog-box">
+            <div class="blog-item">
+              <img class="blog-image" src="img/forest.jpg" />
+              <section class="pt-sm-4 ps-4">
+                <h3 class="pb-3">
+                  <a href="single.html">
+                    Hopeful lessons from<br>
+                    the battle to save<br>
+                    rainforests
+                  </a>
+                </h3>
+                <p class="blog-date">June 19, 2017</p>
+                <span class="badge bg-secondary">Nature</span>
+              </section>
+            </div>
+            <div class="blog-item">
+              <img class="blog-image" src="img/desert.jpg" />
+              <section class="pt-sm-4 ps-4">
+                <h3 class="pb-3">
+                  <a href="single.html">
+                    How to fight<br>
+                    desertification and<br>
+                    reverse climate change
+                  </a>
+                </h3>
+                <p class="blog-date">June 17, 2017</p>
+                <span class="badge bg-secondary">Nature</span>
+              </section>
+            </div>
+            <div class="blog-item">
+              <img class="blog-image" src="img/sunset.jpg" />
+              <section class="pt-sm-4 ps-4">
+                <h3 class="pb-3">
+                  <a href="single.html">
+                    Why I'm rowing<br>
+                    across the Pacific
+                  </a>
+                </h3>
+                <p class="blog-date">June 16, 2017</p>
+                <span class="badge bg-secondary">Adventure</span>
+              </section>
+            </div>
+            <div class="blog-item">
+              <img class="blog-image" src="img/italy.jpg" />
+              <section class="pt-sm-4 ps-4">
+                <h3 class="pb-3">
+                  <a href="single.html">
+                    Unseen footage,<br>
+                    untamed nature
+                  </a>
+                </h3>
+                <p class="blog-date">June 15, 2017</p>
+                <span class="badge bg-secondary">Nature</span>
+              </section>
+            </div>
+            <div class="blog-item">
+              <img class="blog-image" src="img/asia.jpg" />
+              <section class="pt-sm-4 ps-4">
+                <h3 class="pb-3">
+                  <a href="single.html">
+                    The case for<br>
+                    engineering our food
+                  </a>
+                </h3>
+                <p class="blog-date">June 14, 2017</p>
+                <span class="badge bg-secondary">Culture</span>
+              </section>
+            </div>
           </div>
-          <div class="blog-item">
-            <img class="blog-image" src="img/desert.jpg" />
-            <section class="blog-text">
-              <h3 class="blog-text-heading">
-                <a href="single.html">
-                  How to fight<br>
-                  desertification and<br>
-                  reverse climate change
-                </a>
-              </h3>
-              <p class="blog-date">June 17, 2017</p>
-              <span class="category">Nature</span>
-            </section>
-          </div>
-          <div class="blog-item">
-            <img class="blog-image" src="img/sunset.jpg" />
-            <section class="blog-text">
-              <h3 class="blog-text-heading">
-                <a href="single.html">
-                  Why I'm rowing<br>
-                  across the Pacific
-                </a>
-              </h3>
-              <p class="blog-date">June 16, 2017</p>
-              <span class="category">Adventure</span>
-            </section>
-          </div>
-          <div class="blog-item">
-            <img class="blog-image" src="img/italy.jpg" />
-            <section class="blog-text">
-              <h3 class="blog-text-heading">
-                <a href="single.html">
-                  Unseen footage,<br>
-                  untamed nature
-                </a>
-              </h3>
-              <p class="blog-date">June 15, 2017</p>
-              <span class="category">Nature</span>
-            </section>
-          </div>
-          <div class="blog-item">
-            <img class="blog-image" src="img/asia.jpg" />
-            <section class="blog-text">
-              <h3 class="blog-text-heading">
-                <a href="single.html">
-                  The case for<br>
-                  engineering our food
-                </a>
-              </h3>
-              <p class="blog-date">June 14, 2017</p>
-              <span class="category">Culture</span>
-            </section>
-          </div>
-        </div>
 
         <div class="pagination">
           <p><<</p>
@@ -139,8 +141,9 @@
           <p>>></p>
         </div>
       </section>
+    </div>
 
-      <div class="sidebar">
+      <div class="sidebar col-sm-4">
         <section class="popular">
           <h2 class="popular-heading common-heading">Popular</h2>
           <div class="sidebar-contents">
@@ -181,5 +184,7 @@
     <footer>
       <p class="footer-text">© All rights reserved by Infratop.Inc.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
